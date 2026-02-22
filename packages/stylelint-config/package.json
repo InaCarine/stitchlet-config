@@ -1,5 +1,5 @@
 {
-  "name": "@repo/stylelint-config",
+  "name": "@stitchlet/stylelint-config",
   "version": "0.0.0",
   "type": "module",
   "private": true,
