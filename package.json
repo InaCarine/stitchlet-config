@@ -2,7 +2,6 @@
   "name": "stitchlet-config",
   "private": true,
   "workspaces": [
-    "apps/*",
     "packages/*"
   ],
   "scripts": {
