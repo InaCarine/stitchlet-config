@@ -2,22 +2,6 @@
   "$schema": "https://turborepo.com/schema.json",
   "ui": "tui",
   "tasks": {
-    "build": {
-      "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**"]
-    },
-    "lint": {
-      "dependsOn": ["^lint", "lint:css"],
-      "outputs": ["node_modules/.cache/eslint"]
-    },
-    "lint:css": {
-      "dependsOn": ["^lint:css"],
-      "outputs": ["node_modules/.cache/stylelint"]
-    },
-    "check-types": {
-      "dependsOn": ["^check-types"]
-    },
     "clean": {}
   }
 }
