@@ -1,5 +1,5 @@
 {
-  "name": "starter-project-monorepo",
+  "name": "stitchlet-config",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -7,13 +7,9 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev",
     "lint": "turbo run lint --continue",
     "lint:css": "turbo run lint:css --continue",
     "test": "turbo run test",
-    "test:watch": "turbo run test:watch",
-    "test:coverage": "turbo run test:coverage",
-    "test:update": "turbo run test:update",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,css,scss,json,yml,yaml,html}\"",
     "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,md,css,scss,json,yml,yaml,html}\"",
     "check-types": "turbo run check-types",
