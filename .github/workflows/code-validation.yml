@@ -1,0 +1,76 @@
+name: Code validation
+
+on:
+  pull_request:
+    branches: ["*"]
+
+jobs:
+  format-check:
+    runs-on: ubuntu-latest
+    name: Check formatting
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: ./.github/actions/pnpm-setup
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Format check
+        run: pnpm format:check
+
+  lint:
+    runs-on: ubuntu-latest
+    name: Check linting
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: ./.github/actions/pnpm-setup
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm lint
+
+
+  check-types:
+    runs-on: ubuntu-latest
+    name: Check types
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: ./.github/actions/pnpm-setup
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Type check
+        run: pnpm check-types
+
+  check-build:
+    runs-on: ubuntu-latest
+    name: Check build
+    env:
+      TURBO_LOG_LEVEL: debug
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: ./.github/actions/pnpm-setup
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Setup turbo cache
+        uses: ./.github/actions/turbo-cache
+
+      - name: Build
+        run: pnpm build

@@ -1,0 +1,16 @@
+packages:
+  - apps/*
+  - packages/*
+catalog:
+  '@types/node': '^22.19.1'
+  '@types/react': '^19.2.8'
+  '@types/react-dom': '^19.2.3'
+  'eslint': '^9.39.2'
+  'next': '^16.1.2'
+  'react': '^19.2.3'
+  'react-dom': '^19.2.3'
+  'stylelint': '^16.25.0'
+  'typescript': '^5.9.3'
+ignoredBuiltDependencies:
+  - sharp
+  - unrs-resolver
