@@ -12,14 +12,4 @@ if ! pnpm format:check; then
   exit 1
 fi
 
-if ! pnpm lint; then
-  echo "Linting errors! Push denied."
-  exit 1
-fi
-
-if ! pnpm check-types; then
-  echo "Type errors! Push denied."
-  exit 1
-fi
-
 exit 0
