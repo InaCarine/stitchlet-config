@@ -18,17 +18,6 @@
     "check-types": {
       "dependsOn": ["^check-types"]
     },
-    "test": {},
-    "test:watch": {
-      "cache": false,
-      "persistent": true
-    },
-    "test:coverage": {},
-    "test:update": {},
-    "dev": {
-      "cache": false,
-      "persistent": true
-    },
     "clean": {}
   }
 }
