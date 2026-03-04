@@ -1,8 +1,20 @@
 {
   "name": "@stitchlet/eslint-config",
+  "description": "Shared configuration package for projects using ESLint.",
   "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/InaCarine/stitchlet-config.git",
+    "directory": "packages/eslint-config"
+  },
+  "keywords": [
+    "stitchlet",
+    "eslint",
+    "config",
+    "shared-config"
+  ],
+  "license": "MIT",
   "type": "module",
-  "private": true,
   "exports": {
     "./base": "./base.js",
     "./next-js": "./next.js",

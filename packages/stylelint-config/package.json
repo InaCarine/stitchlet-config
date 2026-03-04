@@ -1,8 +1,20 @@
 {
   "name": "@stitchlet/stylelint-config",
+  "description": "Shared configuration package for projects using Stylelint.",
   "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/InaCarine/stitchlet-config.git",
+    "directory": "packages/stylelint-config"
+  },
+  "keywords": [
+    "stitchlet",
+    "stylelint",
+    "config",
+    "shared-config"
+  ],
+  "license": "MIT",
   "type": "module",
-  "private": true,
   "exports": {
     "./base": "./base.js"
   },

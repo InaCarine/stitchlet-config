@@ -1,7 +1,18 @@
 {
   "name": "@stitchlet/typescript-config",
+  "description": "Shared configuration package for projects using TypeScript.",
   "version": "0.0.0",
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/InaCarine/stitchlet-config.git",
+    "directory": "packages/typescript-config"
+  },
+  "keywords": [
+    "stitchlet",
+    "typescript",
+    "config",
+    "shared-config"
+  ],
   "license": "MIT",
   "publishConfig": {
     "access": "public"
